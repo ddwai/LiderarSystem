@@ -1,0 +1,9 @@
+*.pyc
+
+bash.exe.stackdump
+
+env/
+venv/
+.idea/
+.vscode/
+migrations/

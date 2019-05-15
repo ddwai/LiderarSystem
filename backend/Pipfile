@@ -10,6 +10,7 @@ flask-restful = "*"
 flask-sqlalchemy = "*"
 pyjwt = "*"
 flask-cors = "*"
+flask = "*"
 
 [requires]
 python_version = "3.7"
