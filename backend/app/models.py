@@ -41,4 +41,6 @@ class Usuario(db.Model):
 
     def __repr__(self):
         return f"<User: {self.email}"
+
+db.create_all()
         
