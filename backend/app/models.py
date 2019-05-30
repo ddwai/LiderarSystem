@@ -42,5 +42,21 @@ class Usuario(db.Model):
     def __repr__(self):
         return f"<User: {self.email}"
 
+class Rede(db.Model):
+    __tablename__ = "rede"
+    
+    id = db.Column(db.Integer, autoincrement=True, primary_key=True)
+    
+
+    def __init__(self, nome, sobrenome, cpf, data_nascimento, sexo, contato, email):
+        self.nome = nome
+        self.sobrenome = sobrenome
+        self.cpf = cpf
+        self.data_nascimento = data_nascimento
+        self.sexo = sexo
+        self.contato = contato
+        self.email = email
+
+
 db.create_all()
         
