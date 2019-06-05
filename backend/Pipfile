@@ -11,6 +11,9 @@ flask-sqlalchemy = "*"
 pyjwt = "*"
 flask-cors = "*"
 flask = "*"
+flask-mysql = "*"
+psycopg2 = "*"
+flask-migrate = "*"
 
 [requires]
 python_version = "3.7"

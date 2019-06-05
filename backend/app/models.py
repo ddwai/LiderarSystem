@@ -6,7 +6,7 @@ class Pessoa(db.Model):
     __tablename__ = "pessoa"
     
     id = db.Column(db.Integer, autoincrement=True, primary_key=True)
-    nome = db.Column(db.String(20), nullable=False, index=True)
+    nome = db.Column(db.String(50), nullable=False, index=True)
     sobrenome = db.Column(db.String(20), nullable=False, index=True)
     cpf = db.Column(db.String(11), nullable=False, unique=True, index=True)
     data_nascimento = db.Column(db.DateTime, nullable=False)
@@ -58,5 +58,4 @@ class Rede(db.Model):
         self.email = email
 
 
-db.create_all()
         
