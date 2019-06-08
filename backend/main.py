@@ -1,5 +1,6 @@
 from app import create_app, db
 from flask_migrate import Migrate
+from app.models import Pessoa, Usuario
 
 app = create_app("development")
 
@@ -11,5 +12,7 @@ Migrate(app, db)
 def shell_conext():
     return dict(
         app=app,
-        db=db    
+        db=db,
+        Pessoa=Pessoa,
+        Usuario=Usuario   
     )
