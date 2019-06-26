@@ -1,0 +1,144 @@
+<div class="row">
+  <section class="content-header">
+    <h1>
+      Cadastros
+    </h1>
+    <ol class="breadcrumb">
+      <li><a routerLink="/home"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Cadastros</li>
+    </ol>
+  </section>
+</div>
+
+<nav class="navbar navbar-default">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand active">Pessoa</a>
+			</div>
+			
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li>
+						<a href="/cadastrosusuario">Usuário</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+</nav>
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title text-center">CADASTRO DE PESSOA</h3>
+    </div>
+    
+    <div class="panel-body">
+      
+      <form action="#" class="form-horizontal">
+        <fieldset>
+          <legend>Dados Pessoais</legend>
+          <div class="form-group">
+            <label for="nome" class="col-sm-2 control-label">Nome</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="nome">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="nome" class="col-sm-2 control-label">CPF</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="cpf">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="col-sm-2 control-label">Sexo</label>
+            <div class="col-sm-4">
+              <label class="radio-inline">
+                <input type="radio" name="sexo" id="feminino" value="FEMININO"> Feminino
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="sexo" id="masculino" value="MASCULINO"> Masculino
+              </label>
+            </div>
+          </div>
+          
+          <!-- Date dd/mm/yyyy -->
+          <div class="form-group">
+              <label for="data-nascimento" class="col-sm-2 control-label">Data de Nascimento</label>
+
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask placeholder="dd/mm/aaaa">
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+        </fieldset>
+        
+        <fieldset>
+          <legend>Contato</legend>
+          <div class="form-group">
+            <label for="email" class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-4">
+              <input type="email" class="form-control" id="email">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label for="telefone" class="col-sm-2 control-label">Telefone</label>
+            <div class="col-sm-4">
+              <input type="tel" class="form-control" id="telefone">
+            </div>
+          </div>
+        </fieldset>
+        
+        <fieldset>
+          <legend>Endereço</legend>
+          <div class="form-group">
+            <label for="logradouro" class="col-sm-2 control-label">Logradouro</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="logradouro">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="bairro" class="col-sm-2 control-label">Bairro</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="bairro">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Célula</legend>
+          <label class="col-sm-2 control-label">É discipulo de alguma célula?</label>
+            <div class="col-sm-4">
+              <label class="radio-inline">
+                <input type="radio" name="celula" id="sim" value="SIM"> Sim
+              </label>
+
+              <label class="radio-inline">
+                <input type="radio" name="celula" id="nao" value="NAO"> Nao
+              </label>
+            </div>
+        </fieldset>
+        
+        <button type="submit" class="btn btn-primary">
+          <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Gravar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

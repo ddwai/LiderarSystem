@@ -1,0 +1,81 @@
+<div class="row">
+  <section class="content-header">
+    <h1>
+      Cadastros
+    </h1>
+    <ol class="breadcrumb">
+      <li><a routerLink="/home"><i class="fa fa-dashboard"></i> Home</a></li>
+      <li class="active">Cadastros</li>
+    </ol>
+  </section>
+</div>
+
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3 class="panel-title text-center">CADASTRO DA PALAVRA</h3>
+    </div>
+    
+    <div class="panel-body">
+      
+      <form action="#" class="form-horizontal">
+        <fieldset>
+          <legend>Dados Da Célula</legend>
+          <div class="form-group">
+            <label for="tema" class="col-sm-2 control-label">Tema</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="tema">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="referencial" class="col-sm-2 control-label">Referencial Bíblico</label>
+            <div class="col-sm-4">
+              <input type="text" class="form-control" id="referencial">
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Selecionar Semana</legend>
+          <!-- Date dd/mm/yyyy -->
+          <div class="form-group">
+              <label for="inicio" class="col-sm-2 control-label">Inicio</label>
+
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask placeholder="dd/mm/aaaa">
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+
+          <!-- Date dd/mm/yyyy -->
+          <div class="form-group">
+              <label for="fim" class="col-sm-2 control-label">Fim</label>
+
+            <div class="input-group">
+              <div class="input-group-addon">
+                <i class="fa fa-calendar"></i>
+              </div>
+              <div class="col-sm-4">
+                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask placeholder="dd/mm/aaaa">
+              </div>
+            </div>
+            <!-- /.input group -->
+          </div>
+          <!-- /.form group -->
+        </fieldset>
+        
+        <button type="submit" class="btn btn-primary">
+          <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Gravar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+  
