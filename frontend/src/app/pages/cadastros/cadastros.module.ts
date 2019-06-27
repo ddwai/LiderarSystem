@@ -1,6 +1,8 @@
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 import { CadastrosRoutingModule } from './cadastros-routing.module';
 import { CadastrosComponent } from './cadastros.component';
@@ -13,7 +15,13 @@ import { CadastrosRedeComponent } from './cadastros-rede/cadastros-rede.componen
   imports: [
     CommonModule,
     CadastrosRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot({
+     timeOut: 5000,
+     positionClass: 'toast-top-right',
+     preventDuplicates: false, 
+    })
   ],
   declarations: [CadastrosComponent, CadastrosPessoaComponent, CadastrosCelulaComponent, CadastrosPalavraComponent, CadastrosRedeComponent]
 })

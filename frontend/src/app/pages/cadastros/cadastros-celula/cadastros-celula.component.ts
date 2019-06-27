@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CelulaService } from './celula.service';
 import { CelulaDataService } from './celula-data.service';
 import { Celula } from './celula';
+import { ToastrService } from 'ngx-toastr';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastros-celula',
@@ -13,7 +15,7 @@ export class CadastrosCelulaComponent implements OnInit {
   key: string = '';
   showMsg: boolean = false;
  
-  constructor(private celulaService: CelulaService, private celulaDataService: CelulaDataService) { }
+  constructor(private celulaService: CelulaService, private celulaDataService: CelulaDataService, public toastr: ToastrService) { }
  
   ngOnInit() {
     this.celula = new Celula();
@@ -38,5 +40,21 @@ export class CadastrosCelulaComponent implements OnInit {
     }
  
     this.celula = new Celula();
+  }
+   
+  showSuccess() {
+    this.toastr.success('Registro Efetuado com Sucesso!', 'Successo!');
+  }
+
+  showError() {
+    this.toastr.error('Todos os campos devem ser preenchidos!', 'Oops!');
+  }
+
+  showWarning() {
+    this.toastr.warning('You are being warned.', 'Alert!');
+  }
+
+  showInfo() {
+    this.toastr.info('Just some information for you.');
   }
 }

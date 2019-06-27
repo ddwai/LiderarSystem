@@ -18,21 +18,37 @@
     
     <div class="panel-body">
       
-      <form (ngSubmit)="onSubmit()" class="form-horizontal">
+      <form name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate class="form-horizontal">
         <fieldset>
           <legend>Dados Da Célula</legend>
           <div class="form-group">
             <label for="nome" class="col-sm-2 control-label">Nome</label>
             <div class="col-sm-4">
-              <input type="text" class="form-control" [(ngModel)]="celula.nome" name="nome" />
+              <input type="text" class="form-control" name="nome" [(ngModel)]="celula.nome" #nome="ngModel" [ngClass]="{ 'is-valid': f.submitted && nome.invalid }" required />
+              <div *ngIf="f.submitted && nome.invalid" class="has-error">
+                <div *ngIf="nome.errors.required">
+                  <span class="help-block">
+                    <i class="fa fa-times-circle-o"> </i>
+                    Nome precisa ser preenchido!
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="form-group">
             <div class="col-md-2"> </div>
             <div class="col-sm-4" align="center">
-              <label>Informação Adicional</label>
-              <textarea class="form-control" rows="3" placeholder="Entrar ..." [(ngModel)]="celula.informacao" name="informacao"></textarea>
+              <label for="informacao">Informação Adicional</label>
+              <textarea class="form-control" rows="3" placeholder="Criado em __/__/____ , por ________." name="informacao" [(ngModel)]="celula.informacao" #informacao="ngModel" [ngClass]="{ 'is-valid': f.submitted && informacao.invalid }" required></textarea>
+              <div *ngIf="f.submitted && informacao.invalid" class="has-error">
+                <div *ngIf="informacao.errors.required">
+                  <span class="help-block">
+                    <i class="fa fa-times-circle-o"> </i>
+                    Informação precisa ser preenchido!
+                  </span>
+                </div>
+              </div>            
             </div>
           </div>
 
@@ -43,32 +59,45 @@
           <div class="form-group">
             <label for="logradouro" class="col-sm-2 control-label">Logradouro</label>
             <div class="col-sm-4">
-              <input type="text" class="form-control" [(ngModel)]="celula.logradouro" name="logradouro">
+              <input type="text" class="form-control" name="logradouro" [(ngModel)]="celula.logradouro" #logradouro="ngModel" [ngClass]="{ 'is-valid': f.submitted && logradouro.invalid }" required  />
+              <div *ngIf="f.submitted && logradouro.invalid" class="has-error">
+                <div *ngIf="logradouro.errors.required">
+                  <span class="help-block">
+                    <i class="fa fa-times-circle-o"> </i>
+                    Logradouro precisa ser preenchido!
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
           <div class="form-group">
               <label for="bairro" class="col-sm-2 control-label">Bairro</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" [(ngModel)]="celula.bairro" name="bairro">
+                <input type="text" class="form-control" name="bairro" [(ngModel)]="celula.bairro" #bairro="ngModel" [ngClass]="{ 'is-valid': f.submitted && bairro.invalid }" required />
+                <div *ngIf="f.submitted && bairro.invalid" class="has-error">
+                  <div *ngIf="bairro.errors.required">
+                    <span class="help-block">
+                      <i class="fa fa-times-circle-o"> </i>
+                      Bairro precisa ser preenchido!
+                    </span>
+                  </div>
+                </div>
               </div>
             </div>
         </fieldset>
-
-        <button type="submit" class="btn btn-primary">
-          <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Gravar
-        </button>
-
-        <div class="row" *ngIf="showMsg">
-            <div class="col-xs-12">
-                <div class="alert alert-success alert-dismissible">
-                  <h4><i class="icon fa fa-check"></i> Alert!</h4>
-                  Cadastro efetuado com Sucesso!
-                </div>
-            </div>
+        <div *ngIf="f.submitted; else elseBlock">
+          <button type="submit" class="btn btn-primary" (click)="showSuccess()">
+            <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Gravar
+          </button>
         </div>
-         
-
+        <ng-template #elseBlock>
+            <button type="submit" class="btn btn-primary" (click)="showError()">
+              <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Gravar
+            </button>
+        </ng-template>
+        
+        
       </form>
     </div>
   </div>
