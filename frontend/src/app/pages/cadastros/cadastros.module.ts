@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -11,7 +12,8 @@ import { CadastrosRedeComponent } from './cadastros-rede/cadastros-rede.componen
 @NgModule({
   imports: [
     CommonModule,
-    CadastrosRoutingModule
+    CadastrosRoutingModule,
+    FormsModule
   ],
   declarations: [CadastrosComponent, CadastrosPessoaComponent, CadastrosCelulaComponent, CadastrosPalavraComponent, CadastrosRedeComponent]
 })
