@@ -11,6 +11,7 @@ import { CadastrosCelulaComponent } from './cadastros-celula/cadastros-celula.co
 import { CadastrosPalavraComponent } from './cadastros-palavra/cadastros-palavra.component';
 import { CadastrosRedeComponent } from './cadastros-rede/cadastros-rede.component';
 import { ListaCelulaComponent } from '../lista-celula/lista-celula.component';
+import { CadastrosUsuarioComponent } from './cadastros-pessoa/cadastros-usuario/cadastros-usuario.component';
 
 @NgModule({
   imports: [
@@ -24,6 +25,6 @@ import { ListaCelulaComponent } from '../lista-celula/lista-celula.component';
      preventDuplicates: false, 
     })
   ],
-  declarations: [CadastrosComponent, CadastrosPessoaComponent, CadastrosCelulaComponent, CadastrosPalavraComponent, CadastrosRedeComponent, ListaCelulaComponent]
+  declarations: [CadastrosComponent, CadastrosPessoaComponent, CadastrosCelulaComponent, CadastrosPalavraComponent, CadastrosRedeComponent, ListaCelulaComponent, CadastrosUsuarioComponent]
 })
 export class CadastrosModule { }

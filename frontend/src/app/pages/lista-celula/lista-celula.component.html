@@ -1,7 +1,7 @@
 <div class="row">
   <section class="content-header">
     <h1>
-      Cadastros
+      Lista de Células
     </h1>
     <ol class="breadcrumb">
       <li><a routerLink="/home"><i class="fa fa-dashboard"></i> Home</a></li>
@@ -17,7 +17,7 @@
     </div>
     
     <div class="panel-body">
-      <a href="formulario.html" class="btn btn-primary">
+      <a routerLink="/cadastroscelula" class="btn btn-primary">
         <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Novo
       </a>
       
@@ -39,12 +39,10 @@
               <td>{{celula.logradouro}}</td>
               <td>{{celula.bairro}}</td>
               <td>
-                <a href="#" class="btn btn-info">
+                <a routerLink="/cadastroscelula/{{celula.key}}" class="btn btn-info" (click)="edit(contato, contato.key)">
                   <span class="glyphicon glyphicon-edit" aria-hidden="true"></span> Editar
                 </a>
-                <a href="#" class="btn btn-danger">
-                  <span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Excluir
-                </a>
+                <button type="button" class="btn btn-danger ml-2" (click)="delete(celula.key)">Excluir</button>
               </td>
             </tr>
           </tbody>
