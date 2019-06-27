@@ -6,13 +6,15 @@ import { CadastrosPessoaComponent } from './cadastros-pessoa/cadastros-pessoa.co
 import { CadastrosCelulaComponent } from './cadastros-celula/cadastros-celula.component';
 import { CadastrosPalavraComponent } from './cadastros-palavra/cadastros-palavra.component';
 import { CadastrosRedeComponent } from './cadastros-rede/cadastros-rede.component';
+import { ListaCelulaComponent } from '../lista-celula/lista-celula.component';
 
 const cadastrosRoutes: Routes = [
   { path: 'cadastros', component: CadastrosComponent},
   { path: 'cadastrospessoa', component: CadastrosPessoaComponent},
   { path: 'cadastroscelula', component: CadastrosCelulaComponent},
   { path: 'cadastrospalavra', component: CadastrosPalavraComponent},
-  { path: 'cadastrosrede', component: CadastrosRedeComponent}
+  { path: 'cadastrosrede', component: CadastrosRedeComponent},
+  { path: 'listacelula', component: ListaCelulaComponent}
 ];
 
 @NgModule({

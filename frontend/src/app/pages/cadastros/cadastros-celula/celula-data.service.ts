@@ -11,7 +11,7 @@ export class CelulaDataService {
  
   constructor() { }
  
-  changeContato(celula: Celula, key: string) {
+  changeCelula(celula: Celula, key: string) {
     this.celulaSource.next({ celula: celula, key: key });
   }
 }
