@@ -14,6 +14,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SettingsComponent } from './components/settings/settings.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { CadastrosModule } from './pages/cadastros/cadastros.module';
+import { ListasModule } from './pages/listas/listas.module';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { CadastrosModule } from './pages/cadastros/cadastros.module';
     BrowserModule,
     BrowserAnimationsModule,
     CadastrosModule,
+    ListasModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireDatabaseModule

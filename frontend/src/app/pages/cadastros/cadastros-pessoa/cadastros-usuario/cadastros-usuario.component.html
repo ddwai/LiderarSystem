@@ -19,13 +19,13 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a href="/cadastrosusuario">Pessoa</a>
+				<a class="navbar-brand active" routerLink="/cadastrospessoa">Pessoa</a>
 			</div>
 			
 			<div id="navbar" class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
 					<li>
-						<a class="navbar-brand active">Usuário</a>
+						<a routerLinkActive="active">Usuário</a>
 					</li>
 				</ul>
 			</div>
@@ -44,97 +44,14 @@
         <fieldset>
           <legend>Dados Pessoais</legend>
           <div class="form-group">
-            <label for="nome" class="col-sm-2 control-label">Nome</label>
+            <label for="primeiro-lider" class="col-sm-2 control-label">Selecione a pessoa que deseja tornar usuário: </label>
             <div class="col-sm-4">
-              <input type="text" class="form-control" id="nome">
+              <select class="form-control" *ngFor="let celula of celulas | async">
+                <option>{{celula.nome}}</option>
+              </select>
             </div>
           </div>
-
-          <div class="form-group">
-            <label for="nome" class="col-sm-2 control-label">CPF</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="cpf">
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label class="col-sm-2 control-label">Sexo</label>
-            <div class="col-sm-4">
-              <label class="radio-inline">
-                <input type="radio" name="sexo" id="feminino" value="FEMININO"> Feminino
-              </label>
-
-              <label class="radio-inline">
-                <input type="radio" name="sexo" id="masculino" value="MASCULINO"> Masculino
-              </label>
-            </div>
-          </div>
-          
-          <!-- Date dd/mm/yyyy -->
-          <div class="form-group">
-              <label for="data-nascimento" class="col-sm-2 control-label">Data de Nascimento</label>
-
-            <div class="input-group">
-              <div class="input-group-addon">
-                <i class="fa fa-calendar"></i>
-              </div>
-              <div class="col-sm-4">
-                <input type="text" class="form-control" data-inputmask="'alias': 'dd/mm/yyyy'" data-mask placeholder="dd/mm/aaaa">
-              </div>
-            </div>
-            <!-- /.input group -->
-          </div>
-          <!-- /.form group -->
-        </fieldset>
-        
-        <fieldset>
-          <legend>Contato</legend>
-          <div class="form-group">
-            <label for="email" class="col-sm-2 control-label">Email</label>
-            <div class="col-sm-4">
-              <input type="email" class="form-control" id="email">
-            </div>
-          </div>
-          
-          <div class="form-group">
-            <label for="telefone" class="col-sm-2 control-label">Telefone</label>
-            <div class="col-sm-4">
-              <input type="tel" class="form-control" id="telefone">
-            </div>
-          </div>
-        </fieldset>
-        
-        <fieldset>
-          <legend>Endereço</legend>
-          <div class="form-group">
-            <label for="logradouro" class="col-sm-2 control-label">Logradouro</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="logradouro">
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="bairro" class="col-sm-2 control-label">Bairro</label>
-            <div class="col-sm-4">
-              <input type="text" class="form-control" id="bairro">
-            </div>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Célula</legend>
-          <label class="col-sm-2 control-label">É discipulo de alguma célula?</label>
-            <div class="col-sm-4">
-              <label class="radio-inline">
-                <input type="radio" name="celula" id="sim" value="SIM"> Sim
-              </label>
-
-              <label class="radio-inline">
-                <input type="radio" name="celula" id="nao" value="NAO"> Nao
-              </label>
-            </div>
-        </fieldset>
-        
+        </fieldset>    
         <button type="submit" class="btn btn-primary">
           <span class="glyphicon glyphicon-floppy-disk" aria-hidden="true"></span> Gravar
         </button>

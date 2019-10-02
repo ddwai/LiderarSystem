@@ -1,6 +1,6 @@
-import { CelulaDataService } from '../cadastros/cadastros-celula/celula-data.service';
-import { CelulaService } from '../cadastros/cadastros-celula/celula.service';
-import { Celula } from '../cadastros/cadastros-celula/celula';
+import { CelulaDataService } from '../../cadastros/cadastros-celula/celula-data.service';
+import { CelulaService } from '../../cadastros/cadastros-celula/celula.service';
+import { Celula } from '../../cadastros/cadastros-celula/celula';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 

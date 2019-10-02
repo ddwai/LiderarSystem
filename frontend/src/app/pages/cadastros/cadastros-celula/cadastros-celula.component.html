@@ -26,12 +26,7 @@
             <div class="col-sm-4">
               <input type="text" class="form-control" name="nome" [(ngModel)]="celula.nome" #nome="ngModel" [ngClass]="{ 'is-valid': f.submitted && nome.invalid }" required />
               <div *ngIf="f.submitted && nome.invalid" class="has-error">
-                <div *ngIf="nome.errors.required">
-                  <span class="help-block">
-                    <i class="fa fa-times-circle-o"> </i>
-                    Nome precisa ser preenchido!
-                  </span>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -42,12 +37,7 @@
               <label for="informacao">Informação Adicional</label>
               <textarea class="form-control" rows="3" placeholder="Criado em __/__/____ , por ________." name="informacao" [(ngModel)]="celula.informacao" #informacao="ngModel" [ngClass]="{ 'is-valid': f.submitted && informacao.invalid }" required></textarea>
               <div *ngIf="f.submitted && informacao.invalid" class="has-error">
-                <div *ngIf="informacao.errors.required">
-                  <span class="help-block">
-                    <i class="fa fa-times-circle-o"> </i>
-                    Informação precisa ser preenchido!
-                  </span>
-                </div>
+                
               </div>            
             </div>
           </div>
@@ -61,12 +51,7 @@
             <div class="col-sm-4">
               <input type="text" class="form-control" name="logradouro" [(ngModel)]="celula.logradouro" #logradouro="ngModel" [ngClass]="{ 'is-valid': f.submitted && logradouro.invalid }" required  />
               <div *ngIf="f.submitted && logradouro.invalid" class="has-error">
-                <div *ngIf="logradouro.errors.required">
-                  <span class="help-block">
-                    <i class="fa fa-times-circle-o"> </i>
-                    Logradouro precisa ser preenchido!
-                  </span>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -75,14 +60,7 @@
               <label for="bairro" class="col-sm-2 control-label">Bairro</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control" name="bairro" [(ngModel)]="celula.bairro" #bairro="ngModel" [ngClass]="{ 'is-valid': f.submitted && bairro.invalid }" required />
-                <div *ngIf="f.submitted && bairro.invalid" class="has-error">
-                  <div *ngIf="bairro.errors.required">
-                    <span class="help-block">
-                      <i class="fa fa-times-circle-o"> </i>
-                      Bairro precisa ser preenchido!
-                    </span>
-                  </div>
-                </div>
+                
               </div>
             </div>
         </fieldset>
