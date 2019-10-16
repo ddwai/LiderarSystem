@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
+import { MatButtonModule, MatIconModule } from '@angular/material';
 
 import { CadastrosRoutingModule } from './cadastros-routing.module';
 import { CadastrosComponent } from './cadastros.component';
@@ -18,6 +19,8 @@ import { CadastrosUsuarioComponent } from './cadastros-pessoa/cadastros-usuario/
     CadastrosRoutingModule,
     FormsModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
     ToastrModule.forRoot({
      timeOut: 5000,
      positionClass: 'toast-top-right',

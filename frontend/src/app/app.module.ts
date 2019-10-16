@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule, MatIconModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,10 +10,10 @@ import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { AngularFireModule } from '@angular/fire';
 import { environment } from './../environments/environment';
 
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { SettingsComponent } from './components/settings/settings.component';
-import { MenuComponent } from './components/menu/menu.component';
+import { HeaderComponent } from './components';
+import { FooterComponent } from './components';
+import { SettingsComponent } from './components';
+import { MenuComponent } from './components';
 import { CadastrosModule } from './pages/cadastros/cadastros.module';
 import { ListasModule } from './pages/listas/listas.module';
 
@@ -28,6 +29,8 @@ import { ListasModule } from './pages/listas/listas.module';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
     CadastrosModule,
     ListasModule,
     AppRoutingModule,
